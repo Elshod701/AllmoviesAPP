@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movies APP</title>
+    <!-- boxicon -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <header class="bg-red-600">
+      <div class="container mx-auto pl-[50px]">
+        <nav class="flex justify-between h-[75px] items-center">
+          <a
+            href="#"
+            class="logo text-[28px] text-white font-semibold hidden md:block"
+            >The movies app</a
+          >
+          <input
+            type="text"
+            class="w-[600px] p-3 text-[20px] rounded-2xl hidden lg:block ms-4 lg:w-[600px] md:w-[350px]"
+            placeholder="Enter title"
+          />
+          <select
+            id="theme"
+            class="p-3 rounded-xl w-[100px] ml-[150px] hidden lg:block"
+          >
+            <option value="light">Light</option>
+            <option value="Dark">Dark</option>
+          </select>
+          <span class="menu">
+            <i class="bx bx-menu text-4xl text-white lg:hidden md:block"></i>
+          </span>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="main">
+        <section id="films">
+          <div class="container mx-auto">
+            <div class="wrapper flex">
+              <aside class="bg-stone-800 p-4 h-auto w-1/4">
+                <form action="#">
+                  <label for="title" class="w-[320px] my-4">
+                    <p
+                      class="font-medium text-[24px] font mt-4 mb-2 text-white"
+                    >
+                      Enter the film title
+                    </p>
+                    <input
+                      type="text"
+                      id="title"
+                      class="w-full p-3 rounded-xl text-[22px]"
+                    />
+                  </label>
+
+                  <label for="rating" class="w-[320px]">
+                    <p
+                      class="font-medium text-[24px] font mt-10 mb-2 text-white"
+                    >
+                      Enter the film rating
+                    </p>
+                    <input
+                      type="text"
+                      id="rating"
+                      class="w-full p-3 rounded-xl mb-4 border text-[22px]"
+                    />
+                  </label>
+                  <p class="font-medium text-[24px] font mt-10 mb-2 text-white">
+                    Select the film category
+                  </p>
+                  <select
+                    id="category"
+                    class="w-[353px] text-xl py-3 px-2 rounded-xl text-stone-500"
+                  >
+                    <option class="option" selected disabled>
+                      Select film category
+                    </option>
+                  </select>
+                  <button
+                    type="submit"
+                    class="btn w-full bg-red-600 py-2 text-white font-medSelect film categoryium text-[24px] rounded-2xl mt-[40px] flex items-center justify-center"
+                  >
+                    Search
+                  </button>
+                </form>
+              </aside>
+              <div
+                class="film-wrapper grid grid-cols-3 gap-4 bg-stone-900 p-4 w-3/4"
+              ></div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
+
+  <!-- data js -->
+  <script src="./db.js"></script>
+  <!-- utils js-->
+  <script src="./utils.js"></script>
+  <!-- main js -->
+  <script src="./app.js"></script>
+</html>
